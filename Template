@@ -1,0 +1,31 @@
+//Salman.exe
+
+//Greatest Common Divisor Euclidean
+ul gcd(ul  a,ul b)
+{
+  while(b)
+  {
+    a=a%b;
+    swap(a,b);
+  }
+  return a;
+}
+
+//Least Common Multiple
+ul lcm(ul a, ul b)
+{
+  return (a/gcd(a,b))*b;
+}
+
+//Fast Exponentiation
+long long power(long a, int b)
+{
+  if(b==0)
+    return 1;
+  if(b==1)
+    return a;
+  long long p=power(a,b/2);
+  if(b&1)
+    return p*p*a;
+  return p*p;
+}
