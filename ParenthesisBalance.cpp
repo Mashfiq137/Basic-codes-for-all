@@ -18,6 +18,7 @@ bool areParanthesisBalanced(string expr)
         {
         case ')':
             x = s.top();
+                
             s.pop();
             if ( x=='[')
                 return false;
